@@ -14,7 +14,7 @@
 }
 
 .screenAndErasers, .buttons {
-    width: 90%;
+    width: 460px;
     height: 130px;
     box-sizing: border-box;
     display: flex;
@@ -24,38 +24,26 @@
 
 .screen {
     width: 400px;
-    height: 100%;
     box-sizing: border-box;
     border: 2px solid white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 10px;
+    font-size: 28px;
 }
 
 .erasers {
     display: flex;
     box-sizing: border-box;
-    width: 50px;
     height: 100%;
+    margin: auto 16px;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.btn {
-    display: flex;
-    box-sizing: border-box;
-    width: 80px;
-    height: 50px;
-    border: 2px solid white;
-}
-
-.btnText {
-    margin: auto;
-    background-color: inherit;
-    font-size: 22px;
-    box-sizing: border-box;
-}
-
-
 .buttons {
-    width: 400px;
+    width: 386px;
     height: 250px;
     box-sizing: border-box;
     display: flex;
@@ -66,25 +54,28 @@
 }
 
 .row {
+    width: 100%;
     display: flex;
-    flex-direction: row;
+    box-sizing: border-box;
     justify-content: space-between;
+
 }
 
-.c, .ce, .equal {
+button {
+    width: 76px;
+    height: 40px;
+    border: none;
+    border: 1px solid white;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+.erasers button {
     background-color: white;
-}
-
-.c .btnText, .ce .btnText, .equal .btnText {
     color: black;
 }
 
-.erasers .btn {
-    width: 50px;
-    height: 50px;
-}
-
-.btn:hover {
+button:hover {
     background-color: gray;
     border-color: gray;
     cursor: pointer;
