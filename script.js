@@ -16,26 +16,40 @@ function divide(a, b) {
 
 let first, second, operator = "";
 let display = document.querySelector(".screen");
+let history = document.querySelector(".history");
 
 function appendNumber(number) {
     display.value += number;
-}
+};
+
+function appendDecimal() {
+    if (!(display.value.includes("."))) {
+        display.value += ".";
+    }
+};
 
 function setOperator(oper){
     operator = oper;
     first = display.value;
+    history.value = first + " " + operator;
     display.value = "";
-}
+};
 
 function clearDisplay() {
     display.value = "";
     first = "";
     second = "";
     operator = "";
-} 
+    history.value = "";
+};
+
+function clearOne() {
+    display.value = display.value.substring(0, display.value.length - 1);
+};
 
 function calculate() {
     second = display.value; 
+    history.value += " " + second;
 
     if (operator === '+') {
         display.value = add(parseFloat(first), parseFloat(second));
@@ -50,9 +64,8 @@ function calculate() {
             display.value = divide(parseFloat(first), parseFloat(second));
         }
     }
-    console.log("First:" + first);
-    console.log("Second:" + second);
+    console.log(first + operator + second);
     first = '';
     second = '';
     operator = '';
-}
+};

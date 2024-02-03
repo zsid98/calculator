@@ -9,9 +9,12 @@
 <body>
     <div class="main">
       <div class="screenAndErasers">
-        <input type="text" class="screen" readonly>
+        <div class="screens">
+          <input type="text" class="history" readonly>
+          <input type="text" class="screen" readonly>
+        </div>
         <div class="erasers">
-          <button>C</button>
+          <button onclick="clearOne()">C</button>
           <button onclick="clearDisplay()">CE</button>
         </div>
       </div>
@@ -20,25 +23,25 @@
           <button onclick="appendNumber('7')">7</button>
           <button onclick="appendNumber('8')">8</button>
           <button onclick="appendNumber('9')">9</button>
-          <button onclick="setOperator('÷')">÷</button>
+          <button class="operators" onclick="setOperator('÷')">÷</button>
         </div>
         <div class="row">
           <button onclick="appendNumber('4')">4</button>
           <button onclick="appendNumber('5')">5</button>
           <button onclick="appendNumber('6')">6</button>
-          <button onclick="setOperator('×')">×</button>
+          <button class="operators" onclick="setOperator('×')">×</button>
         </div>
         <div class="row">
           <button onclick="appendNumber('1')">1</button>
           <button onclick="appendNumber('2')">2</button>
           <button onclick="appendNumber('3')">3</button>
-          <button onclick="setOperator('-')">-</button>
+          <button class="operators" onclick="setOperator('-')">-</button>
         </div>
         <div class="row">
-          <button onclick="appendNumber('.')">.</button>
+          <button onclick="appendDecimal()">.</button>
           <button onclick="appendNumber('0')">0</button>
-          <button onclick="calculate()">=</button>
-          <button onclick="setOperator('+')">+</button>
+          <button class="operators" onclick="calculate()">=</button>
+          <button class="operators" onclick="setOperator('+')">+</button>
         </div>
       </div>
     </div>

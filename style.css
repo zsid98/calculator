@@ -22,15 +22,27 @@
     margin: 30px auto auto auto;
 }
 
-.screen {
-    width: 400px;
+.screens {
+    width: 380px;
     box-sizing: border-box;
     border: 2px solid white;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    padding: 10px;
+}
+
+.screen {
+    box-sizing: border-box;
+    border: none;
+    padding-right: 10px;
+    padding-top: 50px;
+    text-align: right;
     font-size: 28px;
+}
+
+.history {
+    padding-right: 10px;
+    box-sizing: border-box;
+    font-size: 28px;
+    text-align: right;
+    border: none;
 }
 
 .erasers {
@@ -43,7 +55,7 @@
 }
 
 .buttons {
-    width: 386px;
+    width: 380px;
     height: 250px;
     box-sizing: border-box;
     display: flex;
@@ -70,7 +82,7 @@ button {
     box-sizing: border-box;
 }
 
-.erasers button {
+.erasers button, .operators {
     background-color: white;
     color: black;
 }
