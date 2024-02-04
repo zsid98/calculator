@@ -10,8 +10,12 @@ function multiply(a, b) {
     return a * b;
 };
 
+function roundToTen(number) {
+    return +(Math.round(number + "e+10") + "e-10");
+} 
+
 function divide(a, b) {
-    return a / b;
+    return roundToTen(a / b);
 };
 
 let first, second, operator = "";
@@ -47,7 +51,7 @@ function clearOne() {
     display.value = display.value.substring(0, display.value.length - 1);
 };
 
-function calculate() {
+function operate() {
     second = display.value; 
     history.value += " " + second;
 
@@ -64,7 +68,6 @@ function calculate() {
             display.value = divide(parseFloat(first), parseFloat(second));
         }
     }
-    console.log(first + operator + second);
     first = '';
     second = '';
     operator = '';
